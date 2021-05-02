@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gestion facture</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
 
@@ -50,7 +50,7 @@
                         <td>{{$it->tva}}</td>
                         <td>{{$it->prixTtc}}</td>
                         <td style="text-align: center;">
-                            <a href="supprimerF/{{$it->numF}}"><i class='far fa-trash-alt fa-1x'></i></a>&ensp;|&ensp;<a href="fact"><i class='fas fa-edit fa-1x'></i></a>&ensp;&ensp;|&ensp;&ensp;<a href="#"><i class="far fa-clipboard fa-1x"></i></a>
+                            <a href="supprimerF/{{$it->numF}}"><i class='far fa-trash-alt fa-1x'></i></a>&ensp;|&ensp;<a href="fact/{{$it->numF}}"><i class='fas fa-edit fa-1x'></i></a>&ensp;&ensp;|&ensp;&ensp;<a href="#"><i class="far fa-clipboard fa-1x"></i></a>
                         </td> 
                     </tr>
                     @endforeach

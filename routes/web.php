@@ -19,8 +19,8 @@ Route::get('/','App\Http\Controllers\Facture@getAll');
 Route::post('rechercherF','App\Http\Controllers\Facture@rechercher');
 
 Route::get('supprimerF/{numF}','App\Http\Controllers\Facture@supprimerF');
-Route::get('fact',[Facture::class,"editFacture"]);
-Route::get('fact',[Facture::class,"Psave"]);
+Route::get('fact',[Facture::class,"addF"]);
+Route::get('fact/{numF}',[Facture::class,"Psave"]);
 Route::post('saveF','App\Http\Controllers\Facture@save');
 
 Route::view('dfact','deatailFacture');

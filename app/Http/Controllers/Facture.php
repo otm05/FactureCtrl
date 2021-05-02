@@ -39,12 +39,12 @@ class Facture extends Controller
         $t1=DB::select('select * from facture');
         return view('cslt_facture',["x"=>$t1]);
     }
-    function editFacture(){
-        return view('editFacture');
+    function addF(){
+        return view('addFcture');
     }
-    function Psave(){
-        $t1=DB::table('facture')->get();
-        return view('editFacture');
+    function Psave($numF){
+        $t1=DB::table('facture')->where("numF",$numF)->get();
+        return view('editFacture',["ed"=>$t1]);
     }
     function save(Request $r)
     {
